@@ -42,7 +42,7 @@ const ReportSetup = () => {
       </Menu>
     </Sidebar>    
   </div>
-
+           
  <div className='middlepanel'> 
   <h3 style={{marginTop:'20px',marginLeft:'20px',fontFamily:'TimesNewroman'}}>
     Report Setup - Source Form(s)
