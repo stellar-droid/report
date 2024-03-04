@@ -40,7 +40,7 @@ const ReportSetup = () => {
         <MenuItem> Source Forms </MenuItem>
         <MenuItem> Calculated Columns </MenuItem>
       </Menu>
-    </Sidebar>
+    </Sidebar>    
   </div>
 
  <div className='middlepanel'> 
