@@ -14,35 +14,22 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
-const ReportSetup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+const SourceForms = () => {
+  
 
-  // const handleChange = (event) => {
-  //   setFormData({ ...formData, [event.target.name]: event.target.value });
-  // };
+  
   return (
     <>
+      
+
+
+     
+      <Paper elevation={4} sx={{display:'flex',flexDirection: 'column',marginLeft:'18px',marginRight:'18px',backgroundColor:'#f5f5f5',marginBottom:'10px'}}>
       <h1 style={{fontFamily:'TimesNewroman'}}>
       Source Form(s)
       </h1>
-
-
-      <Paper elevation={4} sx={{display:'flex',marginLeft:'18px',marginRight:'18px',backgroundColor:'#f5f5f5',marginBottom:'10px'}}>
-  <div className='leftpanel'>
-    <Sidebar>
-      <Menu>
-        <MenuItem> Basic Settings </MenuItem>
-        <MenuItem> Source Forms </MenuItem>
-        <MenuItem> Calculated Columns </MenuItem>
-      </Menu>
-    </Sidebar>    
-  </div>
-           
  <div className='middlepanel'> 
   <h3 style={{marginTop:'20px',marginLeft:'20px',fontFamily:'TimesNewroman'}}>
     Report Setup - Source Form(s)
@@ -106,14 +93,14 @@ const ReportSetup = () => {
                         {/* Add the InfoIcon next to the label */}
                         <InfoIcon style={{ marginLeft: '5px' }} fontSize="small" />
                       </Form.Label>
-                    </Tooltip><Form.Control placeholder="First name" style={{marginLeft:'10px',width:'90%'}}/>
-       <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Connecting fields of base Form</Form.Label><Form.Control  style={{marginLeft:'10px',width:'90%'}} placeholder="First namess" />
-        <Form.Label style={{marginLeft:'10px' ,fontFamily:'TimesNewroman'}} >Base form path to connecting value</Form.Label><Form.Control  style={{marginLeft:'10px',width:'90%'}} placeholder="First namess" />
+                    </Tooltip><Form.Control required  placeholder="Base Form" style={{marginLeft:'10px',width:'90%'}}/>
+       <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Connecting fields of base Form</Form.Label><Form.Control required   style={{marginLeft:'10px',width:'90%'}} placeholder="Connecting Fields" />
+        <Form.Label style={{marginLeft:'10px' ,fontFamily:'TimesNewroman'}} >Base form path to connecting value</Form.Label><Form.Control required   style={{marginLeft:'10px',width:'90%'}} placeholder="Path" />
       </Col>
       <Col style={{width:'50%',fontSize:'20px',marginTop:'7px'}}>
-      <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Joining Form</Form.Label><Form.Control  style={{marginLeft:'10px',width:'90%'}} placeholder="First name" />
-       <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Connecting fields of Joining Form</Form.Label><Form.Control  style={{marginLeft:'10px',width:'90%'}} placeholder="First namess" />
-        <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Joining form path to connecting value</Form.Label><Form.Control  style={{marginLeft:'10px',width:'90%'}} placeholder="First namess" />
+      <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Joining Form</Form.Label><Form.Control required   style={{marginLeft:'10px',width:'90%'}} placeholder="Joining Form " />
+       <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Connecting fields of Joining Form</Form.Label><Form.Control required   style={{marginLeft:'10px',width:'90%'}} placeholder="Connecting Field" />
+        <Form.Label style={{marginLeft:'10px',fontFamily:'TimesNewroman'}}>Joining form path to connecting value</Form.Label><Form.Control required   style={{marginLeft:'10px',width:'90%'}} placeholder="Path" />
       </Col>
         </Row>     
         <Button variant="success" type="submit" style={{margin:'10px',fontFamily:'TimesNewroman'}}>
@@ -135,4 +122,4 @@ const ReportSetup = () => {
   )
 }
 
-export default ReportSetup
+export default SourceForms

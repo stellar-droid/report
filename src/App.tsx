@@ -1,14 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ReportSetup from './components/ReportSetup';
+// import SourceForms from './components/SourceForms';
+import MainRoutes from './routes/MainRoutes';
+import SideNavbar from './components/SideNavbar';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <>
+    <div style={{ display:'flex' }}>
       
-      <ReportSetup />
-    </>
+      {/* <SourceForms /> */}
+      <SideNavbar />
+      {/* <Layout/> */}
+      <MainRoutes />
+      
+    </div>
   );
 }
 
