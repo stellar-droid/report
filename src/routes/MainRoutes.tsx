@@ -20,7 +20,7 @@ const MainRoutes = () => {
         <Route path="/columns" element={<Columns />} />
         <Route path="/controlpanel" element={<ControlPanel />} />
         <Route path="/sourceforms" element={<SourceForms />} />
-    </Route>
+    </Route>              
 
     </Routes>
     
